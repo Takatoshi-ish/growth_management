@@ -21,20 +21,11 @@ class DefaultFirebaseOptions {
     }
     switch (defaultTargetPlatform) {
       case TargetPlatform.android:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for android - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
-        );
+        return android;
       case TargetPlatform.iOS:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for ios - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
-        );
+        return ios;
       case TargetPlatform.macOS:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for macos - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
-        );
+        return macos;
       case TargetPlatform.windows:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for windows - '
@@ -60,5 +51,35 @@ class DefaultFirebaseOptions {
     authDomain: 'growth-management-33d8a.firebaseapp.com',
     storageBucket: 'growth-management-33d8a.appspot.com',
     measurementId: 'G-M833FSE0Y8',
+  );
+
+  static const FirebaseOptions android = FirebaseOptions(
+    apiKey: 'AIzaSyBveKas1Boccw2oKrlhqDVfX2WNpJKsPjg',
+    appId: '1:632918288126:android:e5753ae6bc22bc0ad6a7af',
+    messagingSenderId: '632918288126',
+    projectId: 'growth-management-33d8a',
+    storageBucket: 'growth-management-33d8a.appspot.com',
+  );
+
+  static const FirebaseOptions ios = FirebaseOptions(
+    apiKey: 'AIzaSyA37z1UYR6JpQ7Y7zQFsXlkSApeLSwR3yE',
+    appId: '1:632918288126:ios:ed5655f658d4ecded6a7af',
+    messagingSenderId: '632918288126',
+    projectId: 'growth-management-33d8a',
+    storageBucket: 'growth-management-33d8a.appspot.com',
+    androidClientId: '632918288126-c76ud1m9nacdk1r7l63brcegvcja69f3.apps.googleusercontent.com',
+    iosClientId: '632918288126-n1trt7lfvglumnbarhim7d23snkj1mie.apps.googleusercontent.com',
+    iosBundleId: 'com.example.growthManagement',
+  );
+
+  static const FirebaseOptions macos = FirebaseOptions(
+    apiKey: 'AIzaSyA37z1UYR6JpQ7Y7zQFsXlkSApeLSwR3yE',
+    appId: '1:632918288126:ios:ed5655f658d4ecded6a7af',
+    messagingSenderId: '632918288126',
+    projectId: 'growth-management-33d8a',
+    storageBucket: 'growth-management-33d8a.appspot.com',
+    androidClientId: '632918288126-c76ud1m9nacdk1r7l63brcegvcja69f3.apps.googleusercontent.com',
+    iosClientId: '632918288126-n1trt7lfvglumnbarhim7d23snkj1mie.apps.googleusercontent.com',
+    iosBundleId: 'com.example.growthManagement',
   );
 }
